@@ -2,12 +2,12 @@ import psycopg2
 from dotenv import load_dotenv
 import os
 load_dotenv('.env.local')
-conn=psycopg2.connect(
+def get_connect():
+    conn=psycopg2.connect(
     host=os.getenv('DB_HOST'),
     database=os.getenv('DB_DATABASE'),
     user=os.getenv('DB_USER'),
     password=os.getenv('DB_PASSWORD'),
     port=os.getenv('DB_PORT')
-)
-print("Connection successful!")
-conn.close()
+    )
+    return conn
