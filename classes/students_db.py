@@ -14,6 +14,7 @@ class StudentDB:
             print(e)
 
     def create_student(self):
+        print('create student')
         return
     
 
@@ -23,4 +24,6 @@ class StudentDB:
         print("Connection Closed")
 
 
-
+stu=StudentDB()
+stu.create_student()
+stu.close_connection()
