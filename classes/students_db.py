@@ -1,10 +1,26 @@
 from db_connection import get_connect
-conn=get_connect()
-cur=conn.cursor()
+
+class StudentDB:
+
+    # database connection
+    def __init__(self):
+
+        try:
+            self.conn=get_connect()
+            self.cur=self.conn.cursor()
+            print('Connected!')
+        except Exception as e:
+            print('Database connection fail!')
+            print(e)
+
+    def create_student(self):
+        return
+    
+
+    def close_connection(self):
+        self.cur.close()
+        self.conn.close()
+        print("Connection Closed")
 
 
 
-
-
-cur.close()
-conn.close()
