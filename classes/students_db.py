@@ -1,1 +1,10 @@
-from classes.db_connection import get_connect
+from db_connection import get_connect
+conn=get_connect()
+cur=conn.cursor()
+
+
+
+
+
+cur.close()
+conn.close()
