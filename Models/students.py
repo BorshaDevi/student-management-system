@@ -1,3 +1,3 @@
-class Student(self):
+class Student:
     def __init__(self):
         return
