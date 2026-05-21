@@ -13,7 +13,11 @@ class StudentDB:
             print('Database connection fail!')
             print(e)
 
-    def create_student(self):
+    def create_student(self,student):
+        query="""INSERT INTO create_student(
+                  
+                  
+                  )"""
         print('create student')
         return
     
