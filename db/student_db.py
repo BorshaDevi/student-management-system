@@ -1,4 +1,5 @@
 from db_connection import get_connect
+from datetime import datetime
 
 class StudentDB:
 
@@ -12,9 +13,13 @@ class StudentDB:
         except Exception as e:
             print('Database connection fail!')
             print(e)
+    
+    def genarate_student_id(self):
+        return
 
     def create_student(self,student):
-        query="""INSERT INTO create_student(
+        self.genarate_student_id()
+        query="""INSERT INTO students(
                   
                   
                   )"""
