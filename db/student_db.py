@@ -19,7 +19,7 @@ class StudentDB:
         return
 
     def create_student(self,student):
-        self.genarate_student_id()
+        # self.genarate_student_id()
         query="""INSERT INTO students(
                   
                   
