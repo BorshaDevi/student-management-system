@@ -1,5 +1,6 @@
 from db_connection import get_connect
 from datetime import datetime
+from Models.students import Student
 
 class StudentDB:
 
@@ -14,7 +15,7 @@ class StudentDB:
             print('Database connection fail!')
             print(e)
     
-    def genarate_student_id(self):
+    def genarate_student_id(self,class_no,roll):
         return
 
     def create_student(self,student):
@@ -32,7 +33,17 @@ class StudentDB:
         self.conn.close()
         print("Connection Closed")
 
-
+name = input("Enter name: ")
+age = int(input("Enter age: "))
+class_no = int(input("Enter class no: "))
+roll = int(input("Enter roll: "))
+gender = input("Enter gender: ")
+depart = input("Enter department: ")
+address = input("Enter address: ")
+email = input("Enter email: ")
+phone_number = input("Enter phone: ")
+s1=Student(name,age,class_no,roll,gender,depart,address,email,phone_number)
 stu=StudentDB()
-stu.create_student()
+stu.genarate_student_id(class_no,roll)
+stu.create_student(s1)
 stu.close_connection()
