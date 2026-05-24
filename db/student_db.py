@@ -16,12 +16,14 @@ class StudentDB:
             print(e)
     
     def genarate_student_id(self,class_no,roll):
-        return
+        year=datetime.now().year
+        student_id=f"{year}{class_no}{roll}"
+        return student_id
 
     def create_student(self,student):
         # self.genarate_student_id()
         query="""INSERT INTO students(
-                  
+                   
                   
                   )"""
         print('create student')
