@@ -1,6 +1,6 @@
 from db_connection import get_connect
 from datetime import datetime
-from Models.students import Student
+from models.students import Student
 
 class StudentDB:
 
@@ -21,7 +21,8 @@ class StudentDB:
         return student_id
 
     def create_student(self,student):
-        # self.genarate_student_id()
+        student_id=self.genarate_student_id(student.class_no,student.roll)
+        print(student_id)
         query="""INSERT INTO students(
                    
                   
@@ -35,17 +36,3 @@ class StudentDB:
         self.conn.close()
         print("Connection Closed")
 
-name = input("Enter name: ")
-age = int(input("Enter age: "))
-class_no = int(input("Enter class no: "))
-roll = int(input("Enter roll: "))
-gender = input("Enter gender: ")
-depart = input("Enter department: ")
-address = input("Enter address: ")
-email = input("Enter email: ")
-phone_number = input("Enter phone: ")
-s1=Student(name,age,class_no,roll,gender,depart,address,email,phone_number)
-stu=StudentDB()
-stu.genarate_student_id(class_no,roll)
-stu.create_student(s1)
-stu.close_connection()
