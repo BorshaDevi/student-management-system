@@ -24,9 +24,31 @@ class StudentDB:
         student_id=self.genarate_student_id(student.class_no,student.roll)
         print(student_id)
         query="""INSERT INTO students(
-                   
-                  
-                  )"""
+                student_id,
+                name,
+                age,
+                class_no,
+                roll,
+                gender,
+                department,
+                address,
+                email,
+                phone_number 
+                )                  
+                VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)
+                  """
+        values=(
+                student_id,
+                student.name,
+                student.age,
+                student.class_no,
+                student.roll,
+                student.gender,
+                student.department,
+                student.address,
+                student.email,
+                student.phone_number 
+        )          
         print('create student')
         return
     
