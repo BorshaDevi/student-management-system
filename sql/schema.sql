@@ -7,6 +7,6 @@ CREATE TABLE students(
     gender VARCHAR(20),
     department VARCHAR(150),
     email VARCHAR(250),
-    phone_number INT,
+    phone_number VARCHAR(14),
     address VARCHAR(400)
 )

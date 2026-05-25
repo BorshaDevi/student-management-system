@@ -21,9 +21,10 @@ class StudentDB:
         return student_id
 
     def create_student(self,student):
-        student_id=self.genarate_student_id(student.class_no,student.roll)
-        print(student_id)
-        query="""INSERT INTO students(
+        try:
+            student_id=self.genarate_student_id(student.class_no,student.roll)
+            print(student_id)
+            query="""INSERT INTO students(
                 student_id,
                 name,
                 age,
@@ -37,7 +38,7 @@ class StudentDB:
                 )                  
                 VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)
                   """
-        values=(
+            values=(
                 student_id,
                 student.name,
                 student.age,
@@ -49,9 +50,16 @@ class StudentDB:
                 student.email,
                 student.phone_number 
         )          
-        print('create student')
-        return
-    
+            
+            self.cur.execute(query,values)
+            self.conn.commit()
+            print('Student created successfully!')
+        except Exception as e:
+            print("Student creation failed!")
+            print(e)
+
+        
+        
 
     def close_connection(self):
         self.cur.close()
