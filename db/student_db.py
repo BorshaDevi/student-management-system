@@ -63,7 +63,14 @@ class StudentDB:
             print(e)
 
         
-        
+# view students
+
+    def view_students(self):
+        query="""SELECT * FROM students"""
+        self.cur.execute(query)
+        students=self.cur.fetchall()
+        for s in students:
+            print(s)
 
     def close_connection(self):
         self.cur.close()
