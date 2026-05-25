@@ -14,11 +14,15 @@ class StudentDB:
         except Exception as e:
             print('Database connection fail!')
             print(e)
-    
+
+# genarate  student  id
+
     def genarate_student_id(self,class_no,roll):
         year=datetime.now().year
         student_id=f"{year}{class_no}{roll}"
         return student_id
+        
+# create student
 
     def create_student(self,student):
         try:
