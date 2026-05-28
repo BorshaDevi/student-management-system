@@ -45,9 +45,9 @@ class StudentDB:
             values=(
                 student_id,
                 student.name,
-                student.age,
-                student.class_no,
-                student.roll,
+                int(student.age),
+                int(student.class_no),
+                int(student.roll),
                 student.gender,
                 student.department,
                 student.address,

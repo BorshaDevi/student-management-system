@@ -5,9 +5,9 @@ from models.inputValid import Validator
 # create student
 
 name = input("Enter name: ")
-age = int(input("Enter age: "))
-class_no = int(input("Enter class no: "))
-roll = int(input("Enter roll: "))
+age = (input("Enter age: "))
+class_no = (input("Enter class no: "))
+roll = (input("Enter roll: "))
 gender = input("Enter gender: ")
 department = input("Enter department: ")
 address = input("Enter address: ")
