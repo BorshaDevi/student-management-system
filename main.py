@@ -15,11 +15,11 @@ email = input("Enter email: ")
 phone_number = input("Enter phone: ")
 s1=Student(name,age,class_no,roll,gender,department,address,email,phone_number)
 stu=StudentDB()
-valid=Validator(s1)
+valid,msg=Validator(s1)
 if(valid):
     stu.create_student(s1)
 else:
-   print(valid)
+   print(msg)
 # view student
 stu.view_students()
 
