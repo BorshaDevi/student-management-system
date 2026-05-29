@@ -28,12 +28,19 @@ while True:
         valid,msg=Validator(s1)
         if(valid):
             stu.create_student(s1)
+            stu.close_connection()
         else:
            print(msg)
+           stu.close_connection()
+
+    # view student
+    elif choice=='2':
+        stu.view_students()
+        stu.close_connection()
 
 
-# view student
-stu.view_students()
 
 
-stu.close_connection()
+
+
+
