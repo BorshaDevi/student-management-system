@@ -2,6 +2,12 @@ from models.students import Student
 from db.student_db import StudentDB
 from models.inputValid import Validator
 
+def menu():
+    print('\n ---Student Management System---')
+    print("1. Add student")
+    print("2. View Student")
+
+
 # create student
 
 name = input("Enter name: ")
