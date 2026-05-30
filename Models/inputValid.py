@@ -35,14 +35,12 @@ class Validator:
             return (False,f'Address  is required.')
         
         # Email validation
-        if student.email.strip()=='':
-            return (False,f'Email is required.')
+        
         if '@' not in student.email:
             return (False,f'Invalid email.')
         
         # Phone Number validation
-        if student.phone_number.strip()=='':
-            return (False,f'Phone Number  is required.')
+      
         if not student.phone_number.isdigit():
             return (False,f'Phone Number  must be number.')
         
