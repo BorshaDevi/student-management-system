@@ -1,7 +1,5 @@
-from models.students import Student
-from db.student_db import StudentDB
-from models.inputValid import Validator
-
+from managers.students_manager import StudentsManager
+SM=StudentsManager()
 def menu():
     print('\n ---Student Management System---')
     print("1. Add student")
@@ -23,20 +21,13 @@ while True:
         address = input("Enter address: ")
         email = input("Enter email: ")
         phone_number = input("Enter phone: ")
-        s1=Student(name,age,class_no,roll,gender,department,address,email,phone_number)
-        stu=StudentDB()
-        valid,msg=Validator(s1)
-        if(valid):
-            stu.create_student(s1)
-            stu.close_connection()
-        else:
-           print(msg)
-           stu.close_connection()
+        s=name,age,class_no,roll,gender,department,address,email,phone_number
+        SM.createStudent(s)
 
     # view student
-    elif choice=='2':
-        stu.view_students()
-        stu.close_connection()
+    # elif choice=='2':
+    #     # stu.view_students()
+    #     # stu.close_connection()
 
 
 
