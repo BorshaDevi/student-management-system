@@ -1,5 +1,6 @@
 class Validator:
-    def validatorInput(self,student):
+    @staticmethod
+    def validatorInput(student):
         # Name validation
         if student.name.strip()=='':
             return (False,f'Name is required.')
