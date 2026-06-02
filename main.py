@@ -25,9 +25,8 @@ while True:
         SM.createStudent(s)
 
     # view student
-    # elif choice=='2':
-    #     # stu.view_students()
-    #     # stu.close_connection()
+    elif choice=='2':
+        SM.view_student()
 
 
 
