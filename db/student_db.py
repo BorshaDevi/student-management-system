@@ -72,6 +72,9 @@ class StudentDB:
         for s in students:
             print(s)
 
+# Update 
+    def updatestudent(self):
+        return
     def close_connection(self):
         self.cur.close()
         self.conn.close()
