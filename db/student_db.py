@@ -74,6 +74,9 @@ class StudentDB:
 
 # Update 
     def updatestudent(self):
+        query=
+        value=
+        self.cur.execute(query,value)
         return
     def close_connection(self):
         self.cur.close()
