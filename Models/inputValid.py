@@ -29,16 +29,20 @@ class Validator:
         if student.department.strip()=='':
             return (False,f'Department is required.')
         if student.department.isdigit():
-            return (False,f'Department must be text.')
+            return (False,f'Department is must be text.')
         
         # Address validation
         if student.address.strip()=='':
             return (False,f'Address  is required.')
+        if student.address.replace(" "," ").isdigit():
+            return (False,f'In Address,only number is not acceptable .')
         
         # Email validation
         
-        if '@' not in student.email:
+        if '@' not in student.email :
             return (False,f'Invalid email.')
+        if  student.email.replace(" "," ").isdigit():
+            return (False,f'In Email,only number is not acceptable .')
         
         # Phone Number validation
       
@@ -47,3 +51,54 @@ class Validator:
         
 
         return True ,'Valid'
+    
+
+
+    # def updateValidatorInput(student):
+    #     # Name validation
+    #     if student.name.isdigit():
+    #         return (False,f'Name must be text.')
+        
+    #     # age validation
+    #     if not student.age.isdigit():
+    #         return (False,f'Age is must be number')
+        
+    #     # class no validation
+    #     if not student.class_no.isdigit():
+    #         return (False,f'Class no  is must be number.')
+        
+    #     # Roll validation
+    #     if not student.roll.isdigit():
+    #         return (False,f'Roll is must be number.')
+        
+    #     # Department validation
+    #     if student.department.isdigit():
+    #         return (False,f'Department must be text.')
+        
+    #     # Address validation
+    #     if student.address.strip()=='':
+    #         return (False,f'Address  is required.')
+        
+    #     # Email validation
+        
+    #     if '@' not in student.email:
+    #         return (False,f'Invalid email.')
+        
+    #     # Phone Number validation
+      
+    #     if not student.phone_number.isdigit():
+    #         return (False,f'Phone Number  must be number.')
+        
+
+    #     return True ,'Valid'
+
+
+
+
+
+
+
+
+
+
+
