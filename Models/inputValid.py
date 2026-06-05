@@ -34,14 +34,14 @@ class Validator:
         # Address validation
         if student.address.strip()=='':
             return (False,f'Address  is required.')
-        if student.address.replace(" "," ").isdigit():
+        if student.address.replace(" ","").isdigit():
             return (False,f'In Address,only number is not acceptable .')
         
         # Email validation
         
         if '@' not in student.email :
             return (False,f'Invalid email.')
-        if  student.email.replace(" "," ").isdigit():
+        if  student.email.replace(" ","").isdigit():
             return (False,f'In Email,only number is not acceptable .')
         
         # Phone Number validation
@@ -53,7 +53,7 @@ class Validator:
         return True ,'Valid'
     
 
-
+    @staticmethod
     def updateValidatorInput(student):
      # Name validation
         if student.name.isdigit():
@@ -79,14 +79,14 @@ class Validator:
         
         # Address validation
 
-        if student.address.replace(" "," ").isdigit():
+        if student.address.replace(" ","").isdigit():
             return (False,f'In Address,only number is not acceptable .')
         
         # Email validation
         
         if '@' not in student.email :
             return (False,f'Invalid email.')
-        if  student.email.replace(" "," ").isdigit():
+        if  student.email.replace(" ","").isdigit():
             return (False,f'In Email,only number is not acceptable .')
         
         # Phone Number validation
