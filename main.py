@@ -4,6 +4,7 @@ def menu():
     print('\n ---Student Management System---')
     print("1. Add student")
     print("2. View Student")
+    print("3. Update Student")
 
 while True:
     menu()
@@ -27,6 +28,10 @@ while True:
     # view student
     elif choice=='2':
         SM.view_student()
+
+    # Update Student
+    elif choice=='3':
+        
 
 
 
