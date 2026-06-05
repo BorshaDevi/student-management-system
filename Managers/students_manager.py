@@ -15,5 +15,6 @@ class StudentsManager:
     def view_student(self):
         stu.view_students()
         stu.close_connection()
-
+    def updateStudent():
+        return
              

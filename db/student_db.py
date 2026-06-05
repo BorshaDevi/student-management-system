@@ -73,7 +73,7 @@ class StudentDB:
             print(s)
 
 # Update 
-    def updatestudent(self):
+    def updateStudent(self):
         query=
         value=
         self.cur.execute(query,value)
