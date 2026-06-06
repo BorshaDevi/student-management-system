@@ -15,6 +15,14 @@ class StudentsManager:
     def view_student(self):
         stu.view_students()
         stu.close_connection()
-    def updateStudent():
-        return
+    def updateStudent(self,student):
+        update=Student(*student)
+        valid,msg=Validator.updateValidatorInput(update)
+        if(valid):
+            stu.updateStudent(update)
+            stu.close_connection()
+        else:
+            print(msg)
+            stu.close_connection()    
+        
              
