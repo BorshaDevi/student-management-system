@@ -1,4 +1,6 @@
 class Validator:
+
+# Create
     @staticmethod
     def validatorInput(student):
         # Name validation
@@ -51,8 +53,10 @@ class Validator:
         
 
         return True ,'Valid'
-    
 
+
+
+# Update 
     @staticmethod
     def updateValidatorInput(student):
      # Name validation
