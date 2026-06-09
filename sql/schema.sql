@@ -1,5 +1,5 @@
 CREATE TABLE students(
-    student_id BIGINT PRIMARY KEY,
+    student_id BIGINT UNIQUE,
     name VARCHAR (350),
     age SMALLINT ,
     class_no INT,
@@ -8,5 +8,6 @@ CREATE TABLE students(
     department VARCHAR(150),
     email VARCHAR(250),
     phone_number VARCHAR(14),
-    address VARCHAR(400)
+    address VARCHAR(400),
+    id SERIAL  PRIMARY KEY
 )

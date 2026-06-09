@@ -73,11 +73,40 @@ class StudentDB:
             print(s)
 
 # Update 
-    def updateStudent(self):
-        query=
-        value=
-        self.cur.execute(query,value)
-        return
+    def updateStudent(self,student):
+        try:
+            query=""" UPDATE students
+            set student_id=%s,
+                name=%s,
+                age=%s,
+                class_no=%s,
+                roll=%s,
+                gender=%s,
+                department=%s,
+                address=%s,
+                email=%s,
+                phone_number=%s
+            WHERE id=%s     
+            """
+            value=(
+                student_id,
+                student.name,
+                int(student.age),
+                int(student.class_no),
+                int(student.roll),
+                student.gender,
+                student.department,
+                student.address,
+                student.email,
+                student.phone_number,
+                student.id
+            )
+            self.cur.execute(query,value)
+        except Exception as e:
+            print("Student update failed!")
+            print(e)
+
+       
     def close_connection(self):
         self.cur.close()
         self.conn.close()
