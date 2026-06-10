@@ -31,6 +31,7 @@ while True:
 
     # Update Student
     elif choice=='3':
+        search = input("Enter name / roll / student_id: ")
         name = input("Enter name: ")
         age = (input("Enter age: "))
         class_no = (input("Enter class no: "))
