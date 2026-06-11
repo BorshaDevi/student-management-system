@@ -31,18 +31,20 @@ while True:
 
     # Update Student
     elif choice=='3':
-        search = input("Enter name / roll / student_id: ")
-        name = input("Enter name: ")
-        age = (input("Enter age: "))
-        class_no = (input("Enter class no: "))
-        roll = (input("Enter roll: "))
-        gender = input("Enter gender: ")
-        department = input("Enter department: ")
-        address = input("Enter address: ")
-        email = input("Enter email: ")
-        phone_number = input("Enter phone: ")
-        s=name,age,class_no,roll,gender,department,address,email,phone_number
-        SM.updateStudent(s)
+        name = input("Enter student previous name: ")
+        class_no = input("Enter student previous  class: ")
+        roll = input("Enter student previous  roll: ")
+        # name = input("Enter name: ")
+        # age = (input("Enter age: "))
+        # class_no = (input("Enter class no: "))
+        # roll = (input("Enter roll: "))
+        # gender = input("Enter gender: ")
+        # department = input("Enter department: ")
+        # address = input("Enter address: ")
+        # email = input("Enter email: ")
+        # phone_number = input("Enter phone: ")
+        # s=name,age,class_no,roll,gender,department,address,email,phone_number
+        # SM.updateStudent(s)
 
 
 
