@@ -31,7 +31,6 @@ while True:
 
     # Update Student
     elif choice=='3':
-        name = input("Enter student previous name: ")
         class_no = input("Enter student previous  class: ")
         roll = input("Enter student previous  roll: ")
         

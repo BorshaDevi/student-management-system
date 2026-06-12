@@ -21,7 +21,9 @@ class StudentsManager:
         stu=StudentDB()
         stu.view_students()
         stu.close_connection()
-
+    
+    def search_student(self):
+        return
 
     def updateStudent(self,student):
         stu=StudentDB()

@@ -72,11 +72,13 @@ class StudentDB:
         for s in students:
             print(s)
 # Search student
+
     def search_student(self):
         return
 
 
-# Update 
+# Update
+ 
     def updateStudent(self,student):
         try:
             query=""" UPDATE students
