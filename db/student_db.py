@@ -71,6 +71,10 @@ class StudentDB:
         students=self.cur.fetchall()
         for s in students:
             print(s)
+# Search student
+    def search_student(self):
+        return
+
 
 # Update 
     def updateStudent(self,student):
