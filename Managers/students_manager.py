@@ -25,8 +25,7 @@ class StudentsManager:
 
     def updateStudent(self,student):
         stu=StudentDB()
-        update=Student(*student)
-        valid,msg=Validator.updateValidatorInput(update)
+        valid,msg=Validator.updateValidatorInput(stu)
         if(valid):
             stu.updateStudent(update)
             stu.close_connection()

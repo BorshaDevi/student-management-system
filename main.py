@@ -34,6 +34,7 @@ while True:
         name = input("Enter student previous name: ")
         class_no = input("Enter student previous  class: ")
         roll = input("Enter student previous  roll: ")
+        
         # name = input("Enter name: ")
         # age = (input("Enter age: "))
         # class_no = (input("Enter class no: "))
