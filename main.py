@@ -33,7 +33,13 @@ while True:
     elif choice=='3':
         class_no = input("Enter student previous  class: ")
         roll = input("Enter student previous  roll: ")
-        
+        if not class_no.isdigit() or not roll.isdigit():
+            print("Class and Roll must be Number.")
+            return 
+        if class_no <=0 or roll <=0 :
+            print('Invalid Class_no and Roll.')
+            return    
+        msg=SM.search_student(class_no,roll)
         # name = input("Enter name: ")
         # age = (input("Enter age: "))
         # class_no = (input("Enter class no: "))
