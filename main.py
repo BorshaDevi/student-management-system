@@ -31,14 +31,16 @@ while True:
 
     # Update Student
     elif choice=='3':
-        class_no = input("Enter student previous  class: ")
+        class_no = input("Enter student previous  class no: ")
         roll = input("Enter student previous  roll: ")
         if not class_no.isdigit() or not roll.isdigit():
             print("Class and Roll must be Number.")
-            return 
+            continue
+        class_no=int(class_no)
+        roll=int(roll)
         if class_no <=0 or roll <=0 :
             print('Invalid Class_no and Roll.')
-            return    
+            continue   
         msg=SM.search_student(class_no,roll)
         # name = input("Enter name: ")
         # age = (input("Enter age: "))

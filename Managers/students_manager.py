@@ -22,9 +22,8 @@ class StudentsManager:
         stu.view_students()
         stu.close_connection()
     
-    def search_student(self):
-        return
-
+    def search_student(self,class_no,roll):
+        print(class_no,roll)
     def updateStudent(self,student):
         stu=StudentDB()
         valid,msg=Validator.updateValidatorInput(stu)
