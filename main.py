@@ -42,7 +42,7 @@ while True:
             print('Invalid Class_no and Roll.')
             continue   
         msg=SM.search_student(class_no,roll)
-        # name = input("Enter name: ")
+        # name = input("Enter name: ") 
         # age = (input("Enter age: "))
         # class_no = (input("Enter class no: "))
         # roll = (input("Enter roll: "))
