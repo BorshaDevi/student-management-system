@@ -73,19 +73,20 @@ class StudentDB:
             print(s)
 # Search student
 
-    def search_student(self):
+    def search_student(self,class_no,roll):
         try:
             query="""SELECT  * FROM students
-            WHERE class_no= s%
-            AND roll= s%
+            WHERE class_no= %s
+            AND roll= %s
             """
             value=(
             class_no,
             roll
             )
             self.cur.execute(query,value)
-            self.conn.commit()
+            student=self.cur.fetchone()
             print('Student search successfully!')
+            return student
         except Exception as e:
             print("Student search failed!")
             print(e)

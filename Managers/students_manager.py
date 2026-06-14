@@ -23,12 +23,16 @@ class StudentsManager:
         stu.close_connection()
     
     def search_student(self,class_no,roll):
-        print(class_no,roll)
+        stu=StudentDB()
+        student=stu.search_student(class_no,roll)
+        stu.close_connection()
+        return student
+
     def updateStudent(self,student):
         stu=StudentDB()
-        valid,msg=Validator.updateValidatorInput(stu)
+        valid,msg=Validator.updateValidatorInput(student)
         if(valid):
-            stu.updateStudent(update)
+            stu.updateStudent(student)
             stu.close_connection()
         else:
             print(msg)

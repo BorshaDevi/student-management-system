@@ -36,12 +36,16 @@ while True:
         if not class_no.isdigit() or not roll.isdigit():
             print("Class and Roll must be Number.")
             continue
-        class_no=int(class_no)
-        roll=int(roll)
-        if class_no <=0 or roll <=0 :
+        n_class_no=int(class_no)
+        n_roll=int(roll)
+        if n_class_no <=0 or n_roll <=0 :
             print('Invalid Class_no and Roll.')
             continue   
-        msg=SM.search_student(class_no,roll)
+        msg=SM.search_student(n_class_no,n_roll)
+        if msg:
+            print(msg,'successful')
+        else:
+            print("Student not found!")
         # name = input("Enter name: ") 
         # age = (input("Enter age: "))
         # class_no = (input("Enter class no: "))
