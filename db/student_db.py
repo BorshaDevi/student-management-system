@@ -73,7 +73,7 @@ class StudentDB:
             print(s)
 # Search student
 
-    def search_student(self,class_no,roll):
+    def search_one_student(self,class_no,roll):
         try:
             query="""SELECT  * FROM students
             WHERE class_no= %s

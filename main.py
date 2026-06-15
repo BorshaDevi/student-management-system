@@ -41,7 +41,7 @@ while True:
         if n_class_no <=0 or n_roll <=0 :
             print('Invalid Class_no and Roll.')
             continue   
-        msg=SM.search_student(n_class_no,n_roll)
+        msg=SM.search_one_student(n_class_no,n_roll)
         if msg:
             print(msg,'successful')
         else:

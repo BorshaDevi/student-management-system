@@ -22,9 +22,9 @@ class StudentsManager:
         stu.view_students()
         stu.close_connection()
     
-    def search_student(self,class_no,roll):
+    def search_one_student(self,class_no,roll):
         stu=StudentDB()
-        student=stu.search_student(class_no,roll)
+        student=stu.search_one_student(class_no,roll)
         stu.close_connection()
         return student
 
