@@ -42,21 +42,24 @@ while True:
             print('Invalid Class_no and Roll.')
             continue   
         msg=SM.search_one_student(n_class_no,n_roll)
-        if msg:
-            print(msg,'successful')
-        else:
-            print("Student not found!")
-        # name = input("Enter name: ") 
-        # age = (input("Enter age: "))
-        # class_no = (input("Enter class no: "))
-        # roll = (input("Enter roll: "))
-        # gender = input("Enter gender: ")
-        # department = input("Enter department: ")
-        # address = input("Enter address: ")
-        # email = input("Enter email: ")
-        # phone_number = input("Enter phone: ")
-        # s=name,age,class_no,roll,gender,department,address,email,phone_number
-        # SM.updateStudent(s)
+       
+        if not msg:
+            print('Student not found!')
+
+        print("successful")    
+        find_id=msg[10]
+
+        name = input("Enter name: ") 
+        age = (input("Enter age: "))
+        class_no = (input("Enter class no: "))
+        roll = (input("Enter roll: "))
+        gender = input("Enter gender: ")
+        department = input("Enter department: ")
+        address = input("Enter address: ")
+        email = input("Enter email: ")
+        phone_number = input("Enter phone: ")
+        s=find_id,name,age,class_no,roll,gender,department,address,email,phone_number
+        SM.updateStudent(s)
 
 
 
