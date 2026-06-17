@@ -45,8 +45,9 @@ class StudentsManager:
 
         valid,msg=Validator.updateValidatorInput(up_student)
         if(valid):
-            stu.updateStudent(_id,up_student)
-            stu.close_connection()
+            print('ok ',up_student, _id)
+            # stu.updateStudent(_id,up_student)
+            # stu.close_connection()
         else:
             print(msg)
             stu.close_connection()    

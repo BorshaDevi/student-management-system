@@ -49,15 +49,15 @@ while True:
         print("successful")    
         find_id=msg[10]
 
-        name = input("Enter name: ") 
-        age = (input("Enter age: "))
-        class_no = (input("Enter class no: "))
-        roll = (input("Enter roll: "))
-        gender = input("Enter gender: ")
-        department = input("Enter department: ")
-        address = input("Enter address: ")
-        email = input("Enter email: ")
-        phone_number = input("Enter phone: ")
+        name = input("Enter update name: ") 
+        age = (input("Enter update age: "))
+        class_no = (input("Enter update class no: "))
+        roll = (input("Enter update roll: "))
+        gender = input("Enter update gender: ")
+        department = input("Enter update department: ")
+        address = input("Enter update address: ")
+        email = input("Enter update email: ")
+        phone_number = input("Enter update phone number: ")
         s=find_id,name,age,class_no,roll,gender,department,address,email,phone_number
         SM.updateStudent(s)
 
