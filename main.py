@@ -40,11 +40,12 @@ while True:
         n_roll=int(roll)
         if n_class_no <=0 or n_roll <=0 :
             print('Invalid Class_no and Roll.')
-            continue   
+            continue  
         msg=SM.search_one_student(n_class_no,n_roll)
        
         if not msg:
             print('Student not found!')
+            continue
 
         print("successful")    
         find_id=msg[10]
@@ -58,8 +59,9 @@ while True:
         address = input("Enter update address: ")
         email = input("Enter update email: ")
         phone_number = input("Enter update phone number: ")
-        s=find_id,name,age,class_no,roll,gender,department,address,email,phone_number
-        SM.updateStudent(s)
+        s =name,age,class_no,roll,gender,department,address,email,phone_number
+       
+        SM.updateStudent(find_id,s)
 
 
 

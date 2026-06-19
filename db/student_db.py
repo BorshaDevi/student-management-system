@@ -85,7 +85,6 @@ class StudentDB:
             )
             self.cur.execute(query,value)
             student=self.cur.fetchone()
-            print('Student search successfully!')
             return student
         except Exception as e:
             print("Student search failed!")
