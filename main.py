@@ -1,5 +1,7 @@
 from managers.students_manager import StudentsManager
+from models.students import UpdateStudent
 SM=StudentsManager()
+US=UpdateStudent()
 def menu():
     print('\n ---Student Management System---')
     print("1. Add student")
@@ -44,22 +46,22 @@ while True:
         msg=SM.search_one_student(n_class_no,n_roll)
        
         if not msg:
+            
             print('Student not found!')
             continue
 
-        print("successful")    
+        print(msg,"successful")    
         find_id=msg[10]
-
-        name = input("Enter update name: ") 
-        age = (input("Enter update age: "))
-        class_no = (input("Enter update class no: "))
-        roll = (input("Enter update roll: "))
-        gender = input("Enter update gender: ")
-        department = input("Enter update department: ")
-        address = input("Enter update address: ")
-        email = input("Enter update email: ")
-        phone_number = input("Enter update phone number: ")
-        s =name,age,class_no,roll,gender,department,address,email,phone_number
+        name =US.get_value("name", msg[1]) 
+        age = US.get_value("age",msg[2])  
+        class_no = US.get_value("class_no",msg[3])  
+        roll = US.get_value("roll",msg[4]) 
+        gender = US.get_value("gender",msg[5]) 
+        address =  US.get_value("address",msg[6]) 
+        email = US.get_value("email",msg[7]) 
+        phone_number =US.get_value("phone_number",msg[8]) 
+        department =US.get_value("department",msg[9])   
+        s =name,str(age),str(class_no),str(roll),gender,address,department,email,phone_number
        
         SM.updateStudent(find_id,s)
 

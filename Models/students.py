@@ -12,6 +12,7 @@ class Student:
             self.roll=roll
 
 class UpdateStudent:
+    @staticmethod
     def get_value(field,old_value):
         value=input(f'{field} {old_value}:').strip()
         return value or old_value
