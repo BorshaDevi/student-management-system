@@ -30,12 +30,12 @@ class StudentsManager:
                 'msg':student ['msg']
                 }
 
-    def updateStudent(self,find_id,student):
+    def updateStudent(self,find_id,student_id,student):
         stu=StudentDB()
         s1=Student(*student)
         valid,msg=Validator.updateValidatorInput(s1)
         if(valid):  
-            stu.updateStudent(find_id,s1)
+            stu.updateStudent(find_id,student_id,s1)
             stu.close_connection()
         else:
             print(msg)

@@ -102,8 +102,12 @@ class StudentDB:
 
 # Update
  
-    def updateStudent(self,student):
-
+    def updateStudent(self,find_id,student_id,student):
+        result=self.search_one_student(student.class_no,student.roll)
+        if result['msg']:
+            student_id=student_id
+        else:
+             student_id=self.genarate_student_id(student.class_no,student.roll)   
         try:
             query=""" UPDATE students
             set student_id=%s,
@@ -129,9 +133,11 @@ class StudentDB:
                 student.address,
                 student.email,
                 student.phone_number,
-                student.id
+                find_id
             )
             self.cur.execute(query,value)
+            self.conn.commit()
+            print('Student Updated Successfully!')
         except Exception as e:
             print("Student update failed!")
             print(e)

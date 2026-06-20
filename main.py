@@ -49,11 +49,12 @@ while True:
         msg=result['msg']   
 
         if not msg:
-            print('Student not found!',msg)
+            print('Student not found!')
             continue
 
-        print(value,"successful")    
+        print(value,"successfull")    
         find_id=value[10]
+        student_id=value[0]
         name =US.get_value("name", value[1]) 
         age = US.get_value("age",value[2])  
         class_no = US.get_value("class_no",value[3])  
@@ -65,7 +66,7 @@ while True:
         department =US.get_value("department",value[9])   
         s =name,str(age),str(class_no),str(roll),gender,address,department,email,phone_number
        
-        SM.updateStudent(find_id,s)
+        SM.updateStudent(find_id,student_id,s)
 
 
 
