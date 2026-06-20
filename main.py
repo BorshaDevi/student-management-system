@@ -43,24 +43,26 @@ while True:
         if n_class_no <=0 or n_roll <=0 :
             print('Invalid Class_no and Roll.')
             continue  
-        msg=SM.search_one_student(n_class_no,n_roll)
-       
+        result=SM.search_one_student(n_class_no,n_roll)
+
+        value=result['student']
+        msg=result['msg']   
+
         if not msg:
-            
-            print('Student not found!')
+            print('Student not found!',msg)
             continue
 
-        print(msg,"successful")    
-        find_id=msg[10]
-        name =US.get_value("name", msg[1]) 
-        age = US.get_value("age",msg[2])  
-        class_no = US.get_value("class_no",msg[3])  
-        roll = US.get_value("roll",msg[4]) 
-        gender = US.get_value("gender",msg[5]) 
-        address =  US.get_value("address",msg[6]) 
-        email = US.get_value("email",msg[7]) 
-        phone_number =US.get_value("phone_number",msg[8]) 
-        department =US.get_value("department",msg[9])   
+        print(value,"successful")    
+        find_id=value[10]
+        name =US.get_value("name", value[1]) 
+        age = US.get_value("age",value[2])  
+        class_no = US.get_value("class_no",value[3])  
+        roll = US.get_value("roll",value[4]) 
+        gender = US.get_value("gender",value[5]) 
+        address =  US.get_value("address",value[6]) 
+        email = US.get_value("email",value[7]) 
+        phone_number =US.get_value("phone_number",value[8]) 
+        department =US.get_value("department",value[9])   
         s =name,str(age),str(class_no),str(roll),gender,address,department,email,phone_number
        
         SM.updateStudent(find_id,s)

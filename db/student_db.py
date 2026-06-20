@@ -85,7 +85,14 @@ class StudentDB:
             )
             self.cur.execute(query,value)
             student=self.cur.fetchone()
-            return student
+            if student:
+                return {'student':student,
+                        'msg':True}
+            else:
+                return {
+                        'student':None,
+                        'msg':False
+                       }            
         except Exception as e:
             print("Student search failed!")
             print(e)
@@ -96,6 +103,7 @@ class StudentDB:
 # Update
  
     def updateStudent(self,student):
+
         try:
             query=""" UPDATE students
             set student_id=%s,

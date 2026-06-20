@@ -26,16 +26,17 @@ class StudentsManager:
         stu=StudentDB()
         student=stu.search_one_student(class_no,roll)
         stu.close_connection()
-        return student
+        return {'student':student['student'],
+                'msg':student ['msg']
+                }
 
     def updateStudent(self,find_id,student):
         stu=StudentDB()
         s1=Student(*student)
         valid,msg=Validator.updateValidatorInput(s1)
-        if(valid):
-            print('ok ',find_id,s1 )
-            # stu.updateStudent(_id,up_student)
-            # stu.close_connection()
+        if(valid):  
+            stu.updateStudent(find_id,s1)
+            stu.close_connection()
         else:
             print(msg)
             stu.close_connection()    
