@@ -137,9 +137,31 @@ class StudentDB:
             )
             self.cur.execute(query,value)
             self.conn.commit()
-            print('Student Updated Successfully!')
+            if self.cur.rowcount>0:
+                print('Student Updated Successfully!')  
+            else:
+                print('Student not found')       
         except Exception as e:
             print("Student update failed!")
+            print(e)
+#Delete
+    def deleteStudent(self,find_id):
+        try:
+            query="""
+            DELETE FROM students
+            WHERE id=%s
+            """
+            value=(
+                find_id,
+            )
+            self.cur.execute(query,value)
+            self.conn.commit()
+            if self.cur.rowcount>0: 
+                print('Student Deleted Successfully!')
+            else:
+                print('Student not found')    
+        except Exception as e:
+            print('Student delete failed!')
             print(e)
 
        
