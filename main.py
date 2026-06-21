@@ -16,9 +16,9 @@ while True:
     if choice=='1':
 
         name = input("Enter name: ")
-        age = (input("Enter age: "))
-        class_no = (input("Enter class no: "))
-        roll = (input("Enter roll: "))
+        age = input("Enter age: ")
+        class_no = input("Enter class no: ")
+        roll = input("Enter roll: ")
         gender = input("Enter gender: ")
         department = input("Enter department: ")
         address = input("Enter address: ")
