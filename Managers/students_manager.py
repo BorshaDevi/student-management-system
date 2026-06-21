@@ -61,5 +61,6 @@ class StudentsManager:
         else:
             print(msg)
             stu.close_connection()    
-        
+    def deleteStudent(self,find_id):
+        pass    
              
