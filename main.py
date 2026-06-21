@@ -40,9 +40,12 @@ while True:
     elif choice=='3':
         class_no = input("Enter student previous  class no: ")
         roll = input("Enter student previous  roll: ")
-        
+
+        value=SM.get_student_by_class_roll(class_no,roll)
+        print(value)
 
         find_id=value[10]
+        print(find_id)
         student_id=value[0]
         name =US.get_value("name", value[1]) 
         age = US.get_value("age",value[2])  
@@ -66,6 +69,7 @@ while True:
 
     # Delete Student
     elif choice=='5':
+        pass
 
 
 
