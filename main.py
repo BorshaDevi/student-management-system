@@ -71,7 +71,7 @@ while True:
         roll = input("Enter student previous  roll: ")
 
         value=SM.get_student_by_class_roll(class_no,roll)
-        
+        SM.deleteStudent(value[10])
 
 
         
