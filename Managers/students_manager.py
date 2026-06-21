@@ -30,6 +30,27 @@ class StudentsManager:
                 'msg':student ['msg']
                 }
 
+    def get_student_by_class_roll(self,class_no,roll):
+        if not class_no.isdigit() or not roll.isdigit():
+            print("Class and Roll must be Number.")
+            return None
+        n_class_no=int(class_no)
+        n_roll=int(roll)
+        if n_class_no <=0 or n_roll <=0 :
+            print('Invalid Class_no and Roll.')
+            return None  
+        result=self.search_one_student(n_class_no,n_roll)
+
+        value=result['student']
+        msg=result['msg']   
+
+        if not msg:
+            print('Student not found!')
+            return None
+        else:
+            return (value,msg)
+            
+    
     def updateStudent(self,find_id,student_id,student):
         stu=StudentDB()
         s1=Student(*student)

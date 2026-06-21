@@ -7,6 +7,8 @@ def menu():
     print("1. Add student")
     print("2. View Student")
     print("3. Update Student")
+    print("4. Search students by class")
+    print("5. Delete Student")
 
 while True:
     menu()
@@ -31,28 +33,15 @@ while True:
     elif choice=='2':
         SM.view_student()
 
+
+  
+
     # Update Student
     elif choice=='3':
         class_no = input("Enter student previous  class no: ")
         roll = input("Enter student previous  roll: ")
-        if not class_no.isdigit() or not roll.isdigit():
-            print("Class and Roll must be Number.")
-            continue
-        n_class_no=int(class_no)
-        n_roll=int(roll)
-        if n_class_no <=0 or n_roll <=0 :
-            print('Invalid Class_no and Roll.')
-            continue  
-        result=SM.search_one_student(n_class_no,n_roll)
+        
 
-        value=result['student']
-        msg=result['msg']   
-
-        if not msg:
-            print('Student not found!')
-            continue
-
-        print(value,"successfull")    
         find_id=value[10]
         student_id=value[0]
         name =US.get_value("name", value[1]) 
@@ -70,7 +59,13 @@ while True:
 
 
 
+    # Search All Student By class
+    elif choice=='4':
+        pass
 
+
+    # Delete Student
+    elif choice=='5':
 
 
 
