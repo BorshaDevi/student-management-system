@@ -50,7 +50,12 @@ class StudentsManager:
         return {'student':student['student'],
                 'msg':student ['msg']
                 }   
-            
+
+    def search_students_by_class(self,class_no):
+        stu=StudentDB()
+        students=stu.search_students_by_class(class_no)
+        stu.close_connection()
+        return students      
     
     def updateStudent(self,find_id,student_id,student):
         stu=StudentDB()
