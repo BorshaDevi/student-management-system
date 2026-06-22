@@ -59,9 +59,11 @@ while True:
 
     # Search Student
     elif choice=='4':
-        class_no = input("Enter student previous  class no: ")
-        roll = input("Enter student previous  roll: ")
-        SM.search_one_student(class_no,roll)
+        class_no = input("Enter student class no: ")
+        roll = input("Enter student  roll: ")
+        result=SM.search_one_student(class_no,roll)
+        student=result['student']
+        print(student[:-1])
 
     # Search All Student By class
     elif choice=='5':
