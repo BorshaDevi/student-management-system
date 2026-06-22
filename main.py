@@ -65,7 +65,7 @@ while True:
         student=result['student']
         print(student[:-1])
 
-    # Search All Student By class
+    # Search Student By class
     elif choice=='5':
         class_no=int(input("Enter the class no: "))
         result=SM.search_students_by_class(class_no)

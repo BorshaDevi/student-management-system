@@ -71,6 +71,7 @@ class StudentDB:
         students=self.cur.fetchall()
         for s in students:
             print(s)
+            
 # Search student
 
     def search_one_student(self,class_no,roll):
@@ -98,7 +99,29 @@ class StudentDB:
             print(e)
 
 
-        
+# Search students by class     
+
+    def search_students_by_class(self,class_no):
+        try:
+            query="""
+            SELECT * FROM students
+            WHERE class_no=%s
+            """
+            value=(
+                class_no,
+            )
+            self.cur.execute(query,value)
+            students=self.cur.fetchall()
+            if students:
+                return students
+            else:
+                return "Can't find the students"  
+        except Exception as e:
+            print('Search Students by class failed!')
+            print(e)
+
+
+       
 
 # Update
  
