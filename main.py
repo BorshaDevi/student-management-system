@@ -7,8 +7,9 @@ def menu():
     print("1. Add student")
     print("2. View Student")
     print("3. Update Student")
-    print("4. Search students by class")
-    print("5. Delete Student")
+    print("4. Search Student")
+    print("5. Search students by class")
+    print("6. Delete Student")
 
 while True:
     menu()
@@ -33,9 +34,6 @@ while True:
     elif choice=='2':
         SM.view_student()
 
-
-  
-
     # Update Student
     elif choice=='3':
         class_no = input("Enter student previous  class no: ")
@@ -59,14 +57,19 @@ while True:
         SM.updateStudent(find_id,student_id,s)
 
 
+    # Search Student
+    elif choice=='4':
+        class_no = input("Enter student previous  class no: ")
+        roll = input("Enter student previous  roll: ")
+        SM.search_one_student(class_no,roll)
 
     # Search All Student By class
-    elif choice=='4':
+    elif choice=='5':
         pass
 
 
     # Delete Student
-    elif choice=='5':
+    elif choice=='6':
         class_no = input("Enter student previous  class no: ")
         roll = input("Enter student previous  roll: ")
 

@@ -22,13 +22,6 @@ class StudentsManager:
         stu.view_students()
         stu.close_connection()
     
-    def search_one_student(self,class_no,roll):
-        stu=StudentDB()
-        student=stu.search_one_student(class_no,roll)
-        stu.close_connection()
-        return {'student':student['student'],
-                'msg':student ['msg']
-                }
 
     def get_student_by_class_roll(self,class_no,roll):
         if not class_no.isdigit() or not roll.isdigit():
@@ -49,6 +42,14 @@ class StudentsManager:
             return None
         
         return value
+
+    def search_one_student(self,class_no,roll):
+        stu=StudentDB()
+        student=stu.search_one_student(class_no,roll)
+        stu.close_connection()
+        return {'student':student['student'],
+                'msg':student ['msg']
+                }   
             
     
     def updateStudent(self,find_id,student_id,student):
