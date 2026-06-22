@@ -69,7 +69,9 @@ while True:
     elif choice=='5':
         class_no=int(input("Enter the class no: "))
         result=SM.search_students_by_class(class_no)
-        print(result)
+        for r in result:
+            print(r)
+        
 
 
     # Delete Student
