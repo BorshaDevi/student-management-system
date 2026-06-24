@@ -41,7 +41,8 @@ while True:
         roll = input("Enter student previous  roll: ")
 
         value=SM.get_student_by_class_roll(class_no,roll)
-
+        if not value:
+            continue
         find_id=value[10]
         student_id=value[0]
         name =US.get_value("name", value[1]) 
@@ -67,7 +68,6 @@ while True:
         value=SM.get_student_by_class_roll(class_no,roll)
         
         if not value:
-            print("Student not found!")
             continue
 
         student_pk=value[10]
