@@ -65,8 +65,14 @@ while True:
         class_no = input("Enter student previous  class no: ")
         roll = input("Enter student previous  roll: ")
         value=SM.get_student_by_class_roll(class_no,roll)
-        id=value[10]
+        
+        if not value:
+            print("Student not found!")
+            continue
+
+        student_pk=value[10]
         file_name=input("Enter file name: ")
+        SM.upload_documents(student_pk,file_name)
 
  
 

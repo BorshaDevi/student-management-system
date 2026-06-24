@@ -68,7 +68,8 @@ class StudentsManager:
             print(msg)
             stu.close_connection()
 
-    
+    def upload_documents(self,student_pk,file_name):
+        pass
 
 
     def deleteStudent(self,find_id):
