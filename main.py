@@ -59,12 +59,15 @@ while True:
 
     # Upload document
     elif choice=='4':
+        # First upload your document in the uploads folder.Then
+        # Enter file name: 'Like - photo.jpg '
+
         class_no = input("Enter student previous  class no: ")
         roll = input("Enter student previous  roll: ")
-
         value=SM.get_student_by_class_roll(class_no,roll)
         id=value[10]
-        
+        file_name=input("Enter file name: ")
+
  
 
     # Search Student

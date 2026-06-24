@@ -66,7 +66,11 @@ class StudentsManager:
             stu.close_connection()
         else:
             print(msg)
-            stu.close_connection()    
+            stu.close_connection()
+
+    
+
+
     def deleteStudent(self,find_id):
          stu=StudentDB()
          stu.deleteStudent(find_id)   
