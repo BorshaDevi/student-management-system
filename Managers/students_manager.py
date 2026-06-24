@@ -1,6 +1,8 @@
 from models.students import Student
 from db.student_db import StudentDB
 from models.inputValid import Validator
+import os
+import shutil
 
 
 class StudentsManager:
@@ -69,9 +71,32 @@ class StudentsManager:
             stu.close_connection()
 
     def upload_documents(self,student_pk,file_name):
-        pass
+        stu=None
+        source=f'uploads/{file_name}'
 
+        if not os.path.exists(source):
+            raise FileNotFoundError(f'File not found : {source}')
 
+        folder=f"documents/{student_pk}"  
+        os.makedirs(folder,exist_ok=True)  
+        destination=os.path.join(folder,file_name)
+
+        try:
+            stu=StudentDB()
+
+            shutil.copy2(source,destination)
+            stu.upload_student_documents(student_pk,file_name,destination)
+            print("Document uploaded successfully")
+        except Exception as e:
+            if os.path.exists(destination):
+                os.remove(destination)
+                raise RuntimeError(e) 
+        finally: 
+            if stu:       
+                stu.close_connection()
+        
+
+        
     def deleteStudent(self,find_id):
          stu=StudentDB()
          stu.deleteStudent(find_id)   
