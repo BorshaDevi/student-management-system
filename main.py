@@ -7,9 +7,10 @@ def menu():
     print("1. Add student")
     print("2. View Student")
     print("3. Update Student")
-    print("4. Search Student")
-    print("5. Search students by class")
-    print("6. Delete Student")
+    print("4. Upload Document")
+    print("5. Search Student")
+    print("6. Search students by class")
+    print("7. Delete Student")
 
 while True:
     menu()
@@ -56,9 +57,18 @@ while True:
        
         SM.updateStudent(find_id,student_id,s)
 
+    # Upload document
+    elif choice=='4':
+        class_no = input("Enter student previous  class no: ")
+        roll = input("Enter student previous  roll: ")
+
+        value=SM.get_student_by_class_roll(class_no,roll)
+        id=value[10]
+        
+ 
 
     # Search Student
-    elif choice=='4':
+    elif choice=='5':
         class_no = input("Enter student class no: ")
         roll = input("Enter student  roll: ")
         result=SM.search_one_student(class_no,roll)
@@ -66,7 +76,7 @@ while True:
         print(student[:-1])
 
     # Search Student By class
-    elif choice=='5':
+    elif choice=='6':
         class_no=int(input("Enter the class no: "))
         result=SM.search_students_by_class(class_no)
         for r in result:
@@ -75,7 +85,7 @@ while True:
 
 
     # Delete Student
-    elif choice=='6':
+    elif choice=='7':
         class_no = input("Enter student previous  class no: ")
         roll = input("Enter student previous  roll: ")
 
