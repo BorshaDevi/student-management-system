@@ -85,7 +85,7 @@ class StudentsManager:
             stu=StudentDB()
 
             shutil.copy2(source,destination)
-            stu.upload_student_documents(student_pk,file_name,destination)
+            stu.upload_students_documents(student_pk,file_name,destination)
             print("Document uploaded successfully")
         except Exception as e:
             if os.path.exists(destination):

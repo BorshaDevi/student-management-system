@@ -167,10 +167,31 @@ class StudentDB:
         except Exception as e:
             print("Student update failed!")
             print(e)
+    
 
 
+# Upload Documents
+    def upload_students_documents(self,student_pk,file_name,destination):
+        try:
+            query="""
+            INSERT INTO student_file(
+            student_pk,
+            file_name,
+            file_path
+            )
+            VALUES(%s,%s,%s)
+            """
+            value=(
+            student_pk,
+            file_name,
+            destination
+            )
+            self.cur.execute(query,value)
+            self.conn.commit()
 
-# 
+        except Exception as e:
+            print("File upload fail!")
+            print(e)    
 
 
 #Delete
