@@ -92,7 +92,9 @@ while True:
         for r in result:
             print(r)
         
-
+    # View student documents
+    elif choice=='7':
+        pass
 
     # Delete Student
     elif choice=='8':
