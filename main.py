@@ -10,7 +10,8 @@ def menu():
     print("4. Upload Document")
     print("5. Search Student")
     print("6. Search students by class")
-    print("7. Delete Student")
+    print("7. View Student Documents")
+    print("8. Delete Student")
 
 while True:
     menu()
@@ -94,7 +95,7 @@ while True:
 
 
     # Delete Student
-    elif choice=='7':
+    elif choice=='8':
         class_no = input("Enter student previous  class no: ")
         roll = input("Enter student previous  roll: ")
 
