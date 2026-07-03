@@ -102,7 +102,7 @@ while True:
             continue
 
         student_pk=value[10]
-        SM.open_docs(student_pk)
+        SM.open_documents(student_pk)
 
     # Delete Student
     elif choice=='8':

@@ -95,7 +95,11 @@ class StudentsManager:
             if stu:       
                 stu.close_connection()
         
-
+    def open_documents(self,student_pk):
+        try:
+            stu=StudentDB()
+        except Exception as e:
+            print(e)
         
     def deleteStudent(self,find_id):
          stu=StudentDB()
