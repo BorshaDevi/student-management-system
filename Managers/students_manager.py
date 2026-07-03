@@ -90,7 +90,7 @@ class StudentsManager:
         except Exception as e:
             if os.path.exists(destination):
                 os.remove(destination)
-                raise RuntimeError(e) 
+            raise RuntimeError(e) 
         finally: 
             if stu:       
                 stu.close_connection()

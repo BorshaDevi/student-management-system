@@ -94,7 +94,15 @@ while True:
         
     # View student documents
     elif choice=='7':
-        pass
+        class_no = input("Enter student previous  class no: ")
+        roll = input("Enter student previous  roll: ")
+        value=SM.get_student_by_class_roll(class_no,roll)
+        
+        if not value:
+            continue
+
+        student_pk=value[10]
+        SM.open_docs(student_pk)
 
     # Delete Student
     elif choice=='8':
