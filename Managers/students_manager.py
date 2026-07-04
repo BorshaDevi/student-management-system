@@ -98,8 +98,13 @@ class StudentsManager:
     def open_documents(self,student_pk):
         try:
             stu=StudentDB()
+            docus=stu.open_documents(student_pk)
+            return docus  
         except Exception as e:
             print(e)
+            return None
+        finally:
+            stu.close_connection()    
         
     def deleteStudent(self,find_id):
          stu=StudentDB()
