@@ -193,6 +193,26 @@ class StudentDB:
             print("File upload fail!")
             print(e)    
 
+# view documents 
+    def open_documents(self,student_pk):
+
+        try:
+            query="""
+            SELECT file_name,file_path FROM student_file
+            WHERE student_pk= %s
+            """
+            value=(
+                student_pk,
+            )
+            self.cur.execute(query,value)
+            docus=self.cur.fetchall()
+            if docus:
+                return docus
+            else:
+                return ("Can't find the student file")  
+        except Exception as e:
+            print('Search Student File failed!') 
+            print(e) 
 
 #Delete
     def deleteStudent(self,find_id):
