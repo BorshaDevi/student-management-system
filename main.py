@@ -103,7 +103,14 @@ while True:
 
         student_pk=value[10]
         doc=SM.open_documents(student_pk)
-        print(doc)
+        
+        if not doc:
+            print("No documents found.")
+            continue
+
+        for i,(file_name,_) in enumerate(doc,start=1):
+            print(f"{i},{file_name}")
+        
 
     # Delete Student
     elif choice=='8':
