@@ -6,7 +6,9 @@ import shutil
 
 
 class StudentsManager:
-    
+
+# Create Student
+
     def createStudent(self,student):
         stu=StudentDB()
         s1=Student(*student)
@@ -18,12 +20,14 @@ class StudentsManager:
            print(msg)
            stu.close_connection()
 
+# view Student
 
     def view_student(self):
         stu=StudentDB()
         stu.view_students()
         stu.close_connection()
     
+# Get student by class,roll Student
 
     def get_student_by_class_roll(self,class_no,roll):
         if not class_no.isdigit() or not roll.isdigit():
@@ -45,6 +49,8 @@ class StudentsManager:
         
         return value
 
+# Search one Student
+
     def search_one_student(self,class_no,roll):
         stu=StudentDB()
         student=stu.search_one_student(class_no,roll)
@@ -53,12 +59,16 @@ class StudentsManager:
                 'msg':student ['msg']
                 }   
 
+# Search students by class
+
     def search_students_by_class(self,class_no):
         stu=StudentDB()
         students=stu.search_students_by_class(class_no)
         stu.close_connection()
         return students      
-    
+
+# Update Student
+
     def updateStudent(self,find_id,student_id,student):
         stu=StudentDB()
         s1=Student(*student)
@@ -69,6 +79,9 @@ class StudentsManager:
         else:
             print(msg)
             stu.close_connection()
+
+
+# Upload Student Document
 
     def upload_documents(self,student_pk,file_name):
         stu=None
@@ -94,7 +107,10 @@ class StudentsManager:
         finally: 
             if stu:       
                 stu.close_connection()
-        
+
+
+# See Student Document by class and roll
+
     def open_documents(self,student_pk):
         try:
             stu=StudentDB()
@@ -105,7 +121,9 @@ class StudentsManager:
             return None
         finally:
             stu.close_connection()    
-        
+
+# Delete Student
+
     def deleteStudent(self,find_id):
          stu=StudentDB()
          stu.deleteStudent(find_id)   
