@@ -108,7 +108,6 @@ while True:
         if not doc:
             print("No documents found.")
             continue
-        print(doc)
         for i,(file_name,_) in enumerate(doc,start=1):
             print(f"{i}. {file_name}")
         choice=int(input("Enter which file you want to see :"))
