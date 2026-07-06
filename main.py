@@ -20,10 +20,16 @@ while True:
 
     # create student
     if choice=='1':
+        while True:
+            class_no = input("Enter class (9/10/11/12): ")
 
+            if class_no in ["9", "10", "11", "12"]:
+                break
+
+            print("Invalid class! Please enter 9, 10, 11, 12.")
+                
         name = input("Enter name: ")
         age = input("Enter age: ")
-        class_no = input("Enter class no: ")
         roll = input("Enter roll: ")
         gender = input("Enter gender: ")
         department = input("Enter department: ")
