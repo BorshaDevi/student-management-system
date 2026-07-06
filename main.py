@@ -1,5 +1,6 @@
 from managers.students_manager import StudentsManager
 from models.students import UpdateStudent
+import os
 SM=StudentsManager()
 US=UpdateStudent()
 def menu():
@@ -107,11 +108,13 @@ while True:
         if not doc:
             print("No documents found.")
             continue
-
+        print(doc)
         for i,(file_name,_) in enumerate(doc,start=1):
-            print(f"{i},{file_name}")
+            print(f"{i}. {file_name}")
+        choice=int(input("Enter which file you want to see :"))
+        file_name,file_path=doc[choice-1]
+        os.startfile(file_path)
         
-
     # Delete Student
     elif choice=='8':
         class_no = input("Enter student previous  class no: ")
