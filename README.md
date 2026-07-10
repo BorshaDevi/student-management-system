@@ -4,6 +4,7 @@
 records, interact with a SQL database , and upload/store student documents in an organized way.
 </p>
 
+---
 ## Features
 
 - **Student Data Management**
