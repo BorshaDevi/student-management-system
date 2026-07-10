@@ -1,5 +1,5 @@
 <h1>Student Management System<h1>
-<p>A simple and efficient Student Management System built with Python. This project helps manage student records, interact with a SQL database, and upload/store student documents in an organized way.</p>
+<p>A simple and efficient **Student Management System** built with **Python**. This project helps manage student records, interact with a SQL database, and upload/store student documents in an organized way.</p>
 
 ## Features
 
@@ -21,9 +21,6 @@
   - Manage uploaded files inside dedicated folders.
 
 ---
-
-
-
 
 ##  Project Structure
 
@@ -56,3 +53,10 @@ student-management-system/
 ├── README.md
 └── main.py
 ```
+
+## Tech Stack
+
+- **Programming Language:** Python
+- **Database:** SQL
+- **Database Connector:** psycopg2
+
