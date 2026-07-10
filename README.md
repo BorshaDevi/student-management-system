@@ -3,8 +3,8 @@
 <p>A simple and efficient Student Management System built with Python.This project helps manage student
 records, interact with a SQL database , and upload/store student documents in an organized way.
 </p>
-
 ---
+
 ## Features
 
 - **Student Data Management**
