@@ -63,3 +63,35 @@ student-management-system/
 - **Database:** SQL (PostgreSQL)
 - **Database Connector:** psycopg2
 
+## Installation
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/BorshaDevi/student-management-system.git
+```
+
+### 2. Navigate to the project directory
+
+```bash
+cd student-management-system
+```
+
+### 3. Install the required dependencies
+
+```bash
+pip install psycopg2
+```
+
+### 4. Configure the database
+
+- Create the required database.
+- Run the SQL script from the `sql/` folder to create the necessary tables.
+- Update the database connection settings if needed.
+
+### 5. Run the application
+
+```bash
+python main.py
+```
+
