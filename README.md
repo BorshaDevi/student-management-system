@@ -139,7 +139,7 @@ Enter phone: +1234567890
 
 Student added successfully.
 ```
-<h1>Concepts Used</h1>
+## Concepts Used
 
 <ul>
 <li>Object-Oriented Programming (OOP)</li>
