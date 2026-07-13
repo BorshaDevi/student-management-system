@@ -142,8 +142,6 @@ Student added successfully.
 <h1>Concepts Used</h1>
 
 <ul>
-<p>Python</p>
-
 <li>Object-Oriented Programming (OOP)</li>
 <li>Modular Programming</li>
 <li>Import System</li>
@@ -151,8 +149,6 @@ Student added successfully.
 <li>File Handling</li>
 <li>Database Integration</li>
 <li>Data Modeling</li>
-
-<p>SQL</p>
 <li>SQL Schema Creation</li>
 <li>Database Queries</li>
 <li>Database Connectivity</li>
