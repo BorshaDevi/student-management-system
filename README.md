@@ -139,10 +139,28 @@ Enter phone: +1234567890
 
 Student added successfully.
 ```
+<h1>Concepts Used</h1>
 
-<br></br>
+<!-- Python -->
+
+<ul>
+<li>Object-Oriented Programming (OOP</li>
+<li>Modular Programming</li>
+<li>Import System</li>
+<li>Control Flow (Loops)</li>
+<li>File Handling</li>
+<li>Database Integration</li>
+<li>Data Modeling</li>
+
+<!-- SQL -->
+<li>SQL Schema Creation</li>
+<li>Database Queries</li>
+<li>Database Connectivity</li>
+</ul>
+
+
+<hr></hr>
 
 Building Dreams With Code.
-
 ---------------------------------
 Happy coding journey...😊
