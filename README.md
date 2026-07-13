@@ -100,3 +100,43 @@ python main.py
 - Python 3.10+
 - PostgreSQL
 - psycopg2
+
+
+
+
+## Run the Application
+
+Start the application by running the following command:
+
+```bash
+python main.py
+```
+
+### Example Usage
+
+```text
+--- Student Management System ---
+
+1. Add Student
+2. View Student
+3. Update Student
+4. Upload Document
+5. Search Student
+6. Search Students by Class
+7. View Student Documents
+8. Delete Student
+
+Enter your choice: 1
+
+Enter class (9/10/11/12): 10
+Enter name: John Doe
+Enter age: 18
+Enter roll: 101
+Enter gender: Male
+Enter department: Science
+Enter address: City Name
+Enter email: johndoe@example.com
+Enter phone: +1234567890
+
+Student added successfully.
+```
