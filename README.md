@@ -161,6 +161,10 @@ Student added successfully.
 
 <hr></hr>
 
+<p>
 Building Dreams With Code.
+</p>
 ---------------------------------
+<p>
 Happy coding journey...😊
+</p>
