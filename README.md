@@ -141,10 +141,10 @@ Student added successfully.
 ```
 <h1>Concepts Used</h1>
 
-<!-- Python -->
-
 <ul>
-<li>Object-Oriented Programming (OOP</li>
+<p>Python</p>
+
+<li>Object-Oriented Programming (OOP)</li>
 <li>Modular Programming</li>
 <li>Import System</li>
 <li>Control Flow (Loops)</li>
@@ -152,7 +152,7 @@ Student added successfully.
 <li>Database Integration</li>
 <li>Data Modeling</li>
 
-<!-- SQL -->
+<p>SQL</p>
 <li>SQL Schema Creation</li>
 <li>Database Queries</li>
 <li>Database Connectivity</li>
