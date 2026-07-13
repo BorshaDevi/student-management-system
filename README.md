@@ -95,3 +95,8 @@ pip install psycopg2
 python main.py
 ```
 
+## Requirements
+
+- Python 3.10+
+- PostgreSQL
+- psycopg2
