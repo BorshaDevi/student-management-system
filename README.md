@@ -1,7 +1,6 @@
 <h1>Student Management System</h1>
 
-<p>A simple and efficient Student Management System built with Python.This project helps manage student
-records, interact with a SQL database , and upload/store student documents in an organized way.
+<p>A modular Student Management System built with Python and SQL, featuring a clean architecture for managing student records, database queries, and document storage efficiently.
 </p>
 
 ## Features
